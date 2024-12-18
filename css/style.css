@@ -1,0 +1,533 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Song+Myung&display=swap');
+*{cursor: url('../img/maybe2.png')2 2.auto;
+}
+body,
+html {
+  font-family: pix-font;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: url("../img/BACKGROUND_01.png") no-repeat center center/cover; /* 배경 이미지 */
+}
+
+@font-face {
+  font-family: "pix-font";
+  src: url(NeoDunggeunmoPro-Regular.woff);
+}
+
+#star-container {
+  z-index: 100;
+  position: relative;
+  width: 100%;
+}
+
+.star {
+  position: absolute;
+  background: url("../img/STAR02.gif") no-repeat center center/contain; /* 별 GIF 파일 경로 */
+  pointer-events: none; /* 마우스 이벤트 무시 */
+  image-rendering: pixelated; /* 픽셀 선명하게 유지 */
+  image-rendering: crisp-edges;
+}
+
+.star.small {
+  width: 15px; /* 작은 버전의 크기 */
+  height: 15px;
+}
+
+.star.large {
+  width: 30px; /* 큰 버전의 크기 */
+  height: 30px;
+}
+
+.box-container {
+  position: absolute; /* 위치 설정 */
+  width: 100%;
+  height: auto;
+}
+
+/* 0번째 페이지 스타일 */
+.page-0 {
+  z-index: 10; /* 더 높은 값으로 위에 표시 */
+/
+}
+
+/* 첫 번째 페이지 스타일 */
+.page-1 {
+  z-index: 99; /* 더 높은 값으로 위에 표시 */
+
+}
+
+/* 두 번째 페이지 스타일 */
+.page-2 {
+  z-index: 98; /* 낮은 값으로 아래에 표시 */
+  text-align: center;
+  display: none; /* 초기에는 숨김 */
+  position: relative;
+}
+.logo {
+  position: absolute;
+  z-index: 888;
+}
+
+.logo img {
+  width: 100%; /* 로고 크기 */
+  height: auto;
+  animation: shiny-btn1 3s ease-in-out infinite;
+}
+
+.logo2 {
+  position: absolute;
+  z-index: 889;
+}
+
+@keyframes shiny-btn1 {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 1;
+    filter: brightness(1.2); /* 더 밝아지는 효과 */
+    transform: scale(1.02); /* 약간 커지는 효과 */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: brightness(1);
+  }
+}
+
+/* 콘텐츠 요소 */
+.content {
+  position: absolute;
+  top: 700px; /* 세로 중앙 정렬 */
+  left: 50%; /* 가로 중앙 정렬 */
+  transform: translate(-50%, -50%); /* 정확한 중앙 위치 */
+  text-align: center;
+  color: #fff; /* 글씨 색상 */
+  z-index: 5;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  animation: blink 2s step-start infinite; /* 블링크 애니메이션 */
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 5rem;
+  text-align: center;
+  padding-top: 30%;
+}
+
+.menu-option {
+  margin: 10px 0;
+  padding-left: 40%;
+  transition: color 0s ease;
+  text-align: center;
+}
+
+.menu-option.selected {
+  color: rgb(21, 255, 0); /* 선택된 항목 강조 */
+  text-shadow: 5px 5px rgb(255, 255, 255);
+}
+
+.arrow {
+  color: #ffe100;
+  position: absolute;
+  left: 20%;
+  transition: top 0s ease;
+}
+
+
+
+
+.page2_text{
+  top: 400px;
+  position: absolute;
+  text-align: center;
+  left: 50%; /* 가로 중앙 정렬 */
+  transform: translate(-50%, -50%); /* 정확한 중앙 위치 */
+  text-align: center;
+  font-size: 36px;
+  letter-spacing: 2px;
+  color: white;
+}
+
+#load-text{
+  font-size: 80px;
+}
+
+.box{
+  border: 9px solid white;
+  position: absolute;
+  width: 1848px;
+  height: 1002px;
+ top: 39px;
+ left: 36px;
+ pointer-events: none;
+}
+
+.loading-container {
+
+  position: absolute;
+  left: 50%; /* 가로 중앙 정렬 */
+  top: 600px;
+  transform: translate(-50%, -50%); /* 정확한 중앙 위치 */
+  text-align: center;
+  text-align: center;
+  font-size: 2rem;
+
+}
+
+/* 로딩 바 스타일 */
+.loading-bar {
+  width: 1000px;
+  height: 70px;
+  background-color: transparent;
+  border: 9px solid #ffffff;
+  position: relative;
+  overflow: hidden;
+  margin: 40px auto;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background-color: #ff56cc; /* 바 색상 */
+}
+
+/* 숫자 표시 */
+.loading-text {
+  font-size: 5rem;
+  color: #ffffff;
+}
+
+
+.page2{
+  top:50px;
+  left: 1580px;
+}
+
+
+.page-3 {
+  z-index: 97; /* 낮은 값으로 아래에 표시 */
+  display: none; /* 초기에는 숨김 */
+}
+
+
+h2 {
+
+  font-size: 180px;
+  margin: 120px auto;
+  text-align: center;
+  color: white;
+  padding: 0rem clamp(1rem, 2vw, 3rem);
+  border-radius: clamp(0.4rem, 0.75vw, 1rem);
+  z-index: 1000;
+  font-family: "Pixelify Sans", sans-serif; /* 첫 번째 폰트 적용 */
+  font-weight: 700; /* 폰트 굵기 설정 */
+}
+
+
+.player-controls{
+
+  margin: 10px 0;
+
+  position: absolute; /* 절대 위치 */
+  left: 50%; /* X축 기준 가운데 */
+  transform: translateX(-50%); /* 정확하게 가로 중앙 정렬 */
+  top: 340px; /* 원하는 Y축 위치 설정 (20%는 화면 상단에서부터 20%) */
+}
+
+
+
+button {
+  width: 100px;
+  height: 100px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  cursor: pointer;
+  font-family: "Pixelify Sans", sans-serif; /* 첫 번째 폰트 적용 */
+  font-weight: 700; /* 폰트 굵기 설정 */
+  font-size: 32px;
+  position: absolute;
+  top:816px;
+  
+}
+button:hover {
+  background-color: #e05b9b;
+}
+
+#restart {
+  
+  background-color: #ffffff;
+  color: rgb(195, 0, 255);
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top:816px;
+  left: 110px;
+  font-family: "Pixelify Sans", sans-serif; /* 첫 번째 폰트 적용 */
+  font-weight: 500; /* 폰트 굵기 설정 */
+  font-size: 32px;
+width: 338px;
+height: 100px;
+}
+
+#restart:hover{
+  background-color:transparent;
+  color: rgb(255, 255, 255);
+  border: 2px solid white;
+}
+
+#buyT {
+  
+  background-color: #ffffff;
+  color: rgb(195, 0, 255);
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top:816px;
+  left: 1470px;
+  font-family: "Pixelify Sans", sans-serif; /* 첫 번째 폰트 적용 */
+  font-weight: 500; /* 폰트 굵기 설정 */
+  font-size: 32px;
+  width: 338px;
+height: 100px;
+}
+
+
+#buyT:hover{
+  background-color:transparent;
+  color: rgb(255, 255, 255);
+  border: 2px solid white;
+}
+
+#volume-up{
+left: 562px
+
+}
+
+#volume-down{
+  left:701px
+}
+#play-pause{
+  width: 250px;
+  left: 836px
+}
+
+
+/* Keyframes for the Shine Animation */
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+
+
+#seek-backward{
+  left: 1121px
+
+}
+#seek-forward{
+  left: 1256px
+}
+#mute{
+  all: unset; /* 버튼의 모든 기본 스타일 제거 */
+  text-decoration: none; /* 텍스트 밑줄 제거 */
+  top: 332px;
+  left: 1475px;
+  width: 64px;
+  height: 64px;
+  position: absolute;
+}
+
+#song-title {
+  margin: 0 100px;
+  font-size: 4rem;
+  color: rgb(255, 255, 255);
+  font-family: "Pixelify Sans", sans-serif; /* 첫 번째 폰트 적용 */
+  font-weight: 400; /* 폰트 굵기 설정 */
+}
+
+
+
+
+
+
+#equalizer {
+  transform: scale(1,-1);
+
+  position: absolute; /* 절대 위치로 조정 */
+  top: 76px; /* 원하는 높이로 조절 */
+  left: 111px; /* 수평 중앙 정렬 */
+  width: 90%;
+  height: 160%;
+  z-index: 0; /* 버튼 아래에 배치 */
+  pointer-events: none; /* 클릭 이벤트 무시 */
+  clip-path: inset(0 2% 0 0); /* 상, 우, 하, 좌 순서로 잘라냄 */
+}
+
+#equalizer:hover {
+  color: white;
+}
+
+.pixel-overlay {
+  position: absolute; /* 이퀄라이저 위에 배치 */
+  top: 440px;
+  left: 110px;
+  pointer-events: none; /* 클릭 이벤트 방해 방지 */
+  opacity: 1; /* 이미지 투명도 조절 (원하는 값으로 변경 가능) */
+}
+
+
+
+.typewriter {
+  font-size: 4em; /* 글자 크기 */
+  color: #ffffff;
+position: absolute;
+  top:333px;
+  left: 94px;
+  letter-spacing: 2px;
+}
+
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+
+.inserted{
+  font-size: 4em;
+  font-weight: 400;
+  color: #ffffff;
+  position: absolute;
+  animation: blink 2s step-start infinite; /* 블링크 애니메이션 */
+}
+
+@keyframes blink {
+  0%, 50%, 100% {
+    opacity: 1; /* 불이 켜진 상태 */
+  }
+  25%, 75% {
+    opacity: 0; /* 불이 꺼진 상태 */
+  }
+}
+
+.page03{
+  top:361px;
+  left: 1618px;
+}
+
+
+
+.song-btn{
+  all: unset; /* 버튼의 모든 기본 스타일 제거 */
+  font-size: 4rem; /* 글자 크기 */
+  color: #ffe100; /* 글자 색상 */
+  cursor: pointer; /* 클릭 가능한 커서 */
+  display: inline-block; /* 글씨 크기만큼만 영역 차지 */
+  text-decoration: none; /* 텍스트 밑줄 제거 */
+}
+
+.song-btn:hover{
+  all: unset; /* 버튼의 모든 기본 스타일 제거 */
+  font-size: 4rem; /* 글자 크기 */
+  color: #a8a590; /* 글자 색상 */
+  cursor: pointer; /* 클릭 가능한 커서 */
+  display: inline-block; /* 글씨 크기만큼만 영역 차지 */
+  text-decoration: none; /* 텍스트 밑줄 제거 */}
+
+
+.bottom-bar{
+  font-weight: 400;
+background-color: white;
+width: 1695px;
+height: 50px;
+position: absolute;
+top:950px;
+  left: 110px;
+  }
+
+
+
+  .location{
+    font-size: 30px;
+    font-weight: 400;
+    position: relative;
+    top: 50%; /* X축 기준 가운데 */
+    transform: translateY(-50%); /* 정확하게 가로 중앙 정렬 */
+    margin-top: 2px;
+    margin-left: 30px;
+  }
+
+  .logo_01{
+    position: absolute;
+    height: 30px;
+    width: auto;
+    top: 960px;
+left: 1372px;
+
+  }
+
+  .logo_02{
+ 
+    height: 78px;
+    width: auto;
+    position: absolute;
+    top: 936px;
+    left: 1548px
+
+  }
+
+  .logo_03{
+ 
+    height: 45px;
+    width: auto;
+    position: absolute;
+    top: 953px;
+    left: 1740px;
+  }
+
+.typewriter{
+  position: absolute;
+  left:110px;
+  top:361px;
+}
+
+.typewriter h6 {
+    color: #fff;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    font-weight: 200;
+    animation: 
+      typing 4s steps(30, end) infinite,
+      blink-caret 0.5s step-end infinite;
+      font-size: 64px;
+    }
+  
+  /* The typing effect */
+  @keyframes typing {
+    0% { width: 0; } /* 시작 상태 */
+    50% { width: 100%; } /* 타이핑 완료 상태 */
+    100% { width: 0; } /* 다시 초기화 */
+  }
+  
+  

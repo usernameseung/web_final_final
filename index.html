@@ -1,0 +1,114 @@
+<html>
+  <head>
+    <!-- JQuery Load -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS Load -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="box-container page-0">
+      <div id="star-container"></div>
+    </div>
+    <div class="box-container page-1">
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo" />
+        <!-- 추가 UI 요소 -->
+      </div>
+      <div class="logo2">
+        <img src="img/logo_sub.png" alt="Logo" />
+      </div>
+
+      <div class="content">
+        <h1 class="title">INSERT COIN TO START</h1>
+        <div class="menu-container">
+          <span class="arrow">▶</span>
+          <div class="menu-option yes" id="yes" data-selected="true">YES</div>
+          <div class="menu-option no" id="no" data-selected="false">
+            &nbsp;NO
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box-container page-2">
+      <div class="box">
+        <div class="inserted page2">COIN 01</div>
+        <div class="page2_text">
+          WAIT UNTIL START
+          <p id="load-text">LOADING...</p>
+        </div>
+        <div class="loading-container">
+          <!-- 로딩 바 -->
+          <div class="loading-bar">
+            <div class="progress-bar"></div>
+          </div>
+          <!-- 로딩 퍼센트 표시 -->
+          <div class="loading-text">0%</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box-container page-3">
+      <div class="box"></div>
+      <h2 data-value="SPLATSOUND">SPLATSOUND</h2>
+
+      <div class="typewriter">
+        <h6>2024-12-18</h6>
+      </div>
+      <div class="inserted page03">COIN 01</div>
+
+      <!-- 노래 제목과 버튼들 -->
+      <div class="player-controls">
+        <button id="back" class="song-btn">◀</button>
+        <span id="song-title">Song Title</span>
+        <button id="forward" class="song-btn">▶</button>
+      </div>
+
+      <!-- 재생 및 기타 조작 버튼 -->
+      <div class="controls">
+        <button id="volume-up">
+          <img id="arrow-icon" src="img/arrow.png" />
+        </button>
+        <button id="volume-down">
+          <img id="arrow-icon" src="img/arrow_down.png" />
+        </button>
+        <button id="play-pause">PLAY</button>
+        <button id="seek-backward">
+          <img id="arrow-icon" src="img/arrow_left.png" />
+        </button>
+        <button id="seek-forward">
+          <img id="arrow-icon" src="img/arrow_right.png" />
+        </button>
+      </div>
+
+      <button id="mute">
+        <img id="mute-icon" src="img/mute_off.png" alt="Mute Button" />
+      </button>
+      <button id="restart">RESTART</button>
+      <button id="buyT">BUY TICKET</button>
+      <!-- 이퀄라이저 캔버스 -->
+      <
+      <div class="equalizer-container">
+        <canvas id="equalizer"></canvas>
+        <img src="img/frame.png" alt="Pixel Grid" class="pixel-overlay" />
+      </div>
+
+      <!-- 오디오 요소 -->
+      <audio id="audio-player" src=""></audio>
+
+      <div class="bottom-bar">
+        <div class="location">LOTTE CONCERT HALL</div>
+      </div>
+      <img src="img/nintendo.png" class="logo_01" />
+      <img src="img/korea_logo.png" class="logo_02" />
+      <img src="img/호리비.png" class="logo_03" />
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
